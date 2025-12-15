@@ -76,9 +76,11 @@ if os.path.exists(LOCAL_CSV_PATH):
         with col1:
             lista_productos = sorted(df[col_prod].unique().astype(str))
             producto_seleccionado = st.selectbox("Selecciona el Producto", lista_productos)
-            
+
         with col2:
-            fecha_prediccion = st.date_input("Fecha a Predecir", value=datetime.today() + timedelta(days=1))
+            # --- AQUÍ ESTÁ EL CAMBIO: FECHA DEFAULT FIJA ---
+            fecha_default = datetime(2025, 9, 23)
+            fecha_prediccion = st.date_input("Fecha a Predecir", value=fecha_default)
 
         # Botón de acción
         if st.button("🔮 Generar Predicción", type="primary"):
