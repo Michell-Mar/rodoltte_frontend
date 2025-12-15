@@ -1,13 +1,18 @@
-[project]
+[tool.poetry]
 name = "frontend"
 version = "0.1.0"
 description = "Add your description here"
+authors = ["Tu Nombre <tucorreo@example.com>"]
 readme = "README.md"
-requires-python = ">=3.13"
 package-mode = false
-dependencies = [
-    "pandas>=2.3.3",
-    "plotly>=6.5.0",
-    "requests>=2.32.5",
-    "streamlit>=1.52.1",
-]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+pandas = ">=2.3.3"
+plotly = ">=6.5.0"
+requests = ">=2.32.5"
+streamlit = ">=1.52.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
