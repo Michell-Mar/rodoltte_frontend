@@ -4,13 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
+package-mode = false
 dependencies = [
     "pandas>=2.3.3",
     "plotly>=6.5.0",
     "requests>=2.32.5",
     "streamlit>=1.52.1",
 ]
-
-# Esta sección evita que 'frontend' se instale como librería
-[tool.uv]
-package = false
