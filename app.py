@@ -122,7 +122,7 @@ if os.path.exists(LOCAL_CSV_PATH):
                         
                         with c_metric:
                             st.subheader("Producción Sugerida")
-                            st.metric(label=f"Para el {fecha_prediccion}", value=f"{prediccion_valor} uds")
+                            st.metric(label=f"Para el {fecha_prediccion}", value=f"{prediccion_valor} unidades")
                             with st.expander("Detalles JSON"):
                                 st.json(data)
 
